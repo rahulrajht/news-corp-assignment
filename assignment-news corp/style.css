@@ -9,6 +9,7 @@ body{
 }
 img{
     width: 100%;
+    overflow: auto;
 }
 .info-div{
     margin-top:20px ;
