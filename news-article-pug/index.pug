@@ -1,0 +1,40 @@
+//- let fs = self.require('fs');
+//- let data = JSON.parse(fs.readFileSync('./html/data.json'));
+mixin newsData(data , i)
+    - let myStyle = data.description ? " " : "small-news"
+    -  let myBorder = data.description ? "none " : "hr"
+    div(class="news-container")
+        hr(class=myBorder)
+        div(class=myStyle) 
+            img.img(src= data.image alt= data.alt)
+            h3.heading= data.Title
+            p
+                span.exclusive= data.isExclusive  ? "Exclusive  " : "" 
+                =  data.description
+
+        .info 
+            p.time= data.time 
+            p.comment= data.comments === 0 ? " " + "📨" : data.comments + "📨"
+
+doctype html 
+html(lang="en")
+    head
+        title News Corp Australia
+        link(rel="stylesheet", href="style.css")
+        script(src="app.js")
+    body
+        .container
+            .header
+            .sidebar 
+            .content                   
+                - var partners =[{"Title":"Live: Greg Inglis to announce nrl retirement","description":"South Sydney, Queensland, and Kangaroos champion Greg Inglis has announced his immediate retirement from rugby league.In an emotional, but at times funny, press conference at Redfern on Monday morning, Inglis said he came to the decision ‘a while ago’ and told his teammates following Saturday’s game on the Sunshine Coast.","time":"2m","comments":0,"isExclusive":false,"image":"../images/article1.jpg"},{"Title":"Opal Tower units still closed as work only approved now","description":"The owners corporation behind the Opal Tower says it has many questions to be answered before it approves a plan by the builder for repairs on the damaged building — meaning residents could be homeless for months.","time":"1h","comments":1,"isExclusive":true,"image":"../images/article2.jpg"},{"Title":"One nation support has crashed:Newspoll","description":"","time":"1h","comments":0,"isExclusive":false,"image":"../images/article3.jpg"},{"Title":"Two fake cops robbed sydney currency exchange shop","description":"","time":"3h","comments":0,"isExclusive":false,"image":"../images/article4.jpg"}]  
+                
+                each item , i in partners
+                    if i == 0
+                        .left 
+                            +newsData(item , i)
+                .right 
+                     each item , i in partners 
+                        if i > 0 
+                            +newsData(item,i)    
+            .footer 
