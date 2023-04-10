@@ -2,6 +2,9 @@
 
 Live project - https://news-corp-assignment.netlify.app/
 
+# Pug Project
+- download the zip file and open news-article-pug in vscode.
+
 To install dependencies 
 
 - npm i 
@@ -12,4 +15,4 @@ To Run the file
 
 To open the project
 
-- npm open
+- npm run open
