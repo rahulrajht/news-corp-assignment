@@ -9,5 +9,4 @@ async function main(){
     jsondata = await getJson()
     console.log(jsondata)
 }
-const arr = [1,2,3]
 main()
