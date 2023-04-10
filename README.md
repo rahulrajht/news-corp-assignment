@@ -2,7 +2,7 @@
 
 Live project - https://news-corp-assignment.netlify.app/
 
-Pug Live project - https://preeminent-daffodil-bf2644.netlify.app/html/
+Pug Live project - https://pug-news.netlify.app/html/
 
 # Pug Project
 - download the zip file and open news-article-pug in vscode.
