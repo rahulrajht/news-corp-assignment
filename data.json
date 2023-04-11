@@ -5,7 +5,7 @@
         "time":"2m",
         "comments":0,
         "isExclusive": false,
-        "image":"./public/images/article1.jpg"
+        "image":"images/article1.jpg"
     },
     {
         "Title":"Opal Tower units still closed as work only approved now",
@@ -13,7 +13,7 @@
         "time":"1h",
         "comments":1,
         "isExclusive": true,
-        "image":"./public/images/article2.jpg"
+        "image":"images/article2.jpg"
     },
     {
         "Title":"One nation support has crashed:Newspoll",
@@ -21,7 +21,7 @@
         "time":"1h",
         "comments":0,
         "isExclusive": false,
-        "image":"./public/images/article3.jpg"
+        "image":"images/article3.jpg"
     },
     {
         "Title":"Two fake cops robbed sydney currency exchange shop",
@@ -29,6 +29,6 @@
         "time":"3h",
         "comments":0,
         "isExclusive": false,
-        "image":"./public/images/article4.jpg"
+        "image":"images/article4.jpg"
     }
 ]
