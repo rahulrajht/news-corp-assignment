@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    background-color: rgb(162, 209, 224);
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3.1fr);
+    grid-template-rows: 75px auto 5px;
+    grid-template-areas: "header header header" "content content content" "footer footer footer";
+  }
+  .container .header {
+    background-color: #272727;
+    height: 70px;
+    grid-area: header;
+  }
+  .container .sidebar {
+    display: none;
+    grid-area: sidebar;
+  }
+  .container .content {
+    grid-area: content;
+    padding: 1rem;
+  }
+  .container .news-container {
+    padding: 1rem;
+    margin-top: 5px;
+  }
+  .container .hr {
+    color: gray;
+  }
+  .container .none {
+    display: none;
+  }
+  .container .small-news {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+  }
+  .container .small-news h4 {
+    font-size: 12px;
+  }
+  .container .small-news .img {
+    width: 90%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .container .img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+  .container .info {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    margin-top: 50px;
+  }
+  .footer {
+    background-color: #272727;
+    height: 70px;
+    grid-area: footer;
+  }
+  .exclusive {
+    font-weight: bold;
+    color: rgb(23, 129, 23);
+  }
+}
+@media screen and (min-width: 700px) {
+  .container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 75px auto 75px;
+    grid-template-areas: "header header sidebar" "content content sidebar" "footer footer footer";
+  }
+  .none {
+    display: none;
+  }
+  .header {
+    background-color: #272727;
+    height: 70px;
+    grid-area: header;
+  }
+  .footer {
+    background-color: #272727;
+    height: 70px;
+    grid-area: footer;
+  }
+  .sidebar {
+    background-color: #272727;
+    grid-area: sidebar;
+  }
+  .content {
+    grid-area: content;
+    width: 80%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  img {
+    width: 100%;
+    overflow: auto;
+    min-width: 150px;
+  }
+  .small-news {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+  }
+  .exclusive {
+    font-weight: bold;
+    color: rgb(23, 129, 23);
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    margin-top: 50px;
+  }
+  .left {
+    width: 400px;
+  }
+  .hr {
+    margin-top: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */
