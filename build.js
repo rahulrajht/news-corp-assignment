@@ -1,6 +1,8 @@
 const fs = require('fs');
 const pug = require('pug');
 
+const { compileSassAndSave } = require('compile-sass'); 
+
 
 
 async function getJson() {
@@ -8,7 +10,7 @@ async function getJson() {
     return json;
 }
 
-async function  loadHTML(){
+async function loadHTML() {
     const compilePug = pug.compileFile('index.pug');
     const compiledHtml = await compilePug(
         { news: await getJson() }
@@ -16,15 +18,15 @@ async function  loadHTML(){
     return compiledHtml;
 }
 
-const build = async ()=>{
+const build = async () => {
     const content = await loadHTML();
 
-fs.writeFile('./public/index.html', content, err => {
-  if (err) {
-    console.error(err);
-  }
-  console.log("successfully")
-  // file written successfully
-});
+    fs.writeFile('./public/index.html', content, err => {
+        if (err) {
+            console.error(err);
+        }
+        console.log("successfull!")
+    });
+    await compileSassAndSave('scss/main.scss', 'public/css/');
 }
 build()
