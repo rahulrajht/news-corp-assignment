@@ -352,6 +352,29 @@
     border: 1px solid gray;
     padding: 1rem;
     grid-area: footer;
+
+    
+
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 50% 30% max-content max-content;
+      padding: 1rem;
+      gap: 10px;
+    }
+
+    .footer-content button {
+      background-color:  $font-color;
+      color: rgb(72, 179, 72);
+      border: 1px solid #fff;
+      border-radius: 5px;
+      font-size: 18px;
+      padding: 0.5rem 1rem;
+    }
+
+    .footer-content {
+      color: rgb(72, 179, 72);
+    }
   }
 
   .sidebar {
