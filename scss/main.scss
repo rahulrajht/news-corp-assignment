@@ -3,14 +3,20 @@
 @import './reset';
 
 
+
 @mixin media-md{
-    @media screen and (max-width:$mobile){
+    @media screen and (max-width:$mobile) and (min-width:$sm-mobile){
         @content;
     }
 }
 
 @mixin media-lg{
     @media screen and (min-width:$large-screen){
+        @content;
+    }
+}
+@mixin media-sm{
+    @media screen and (max-width:$sm-mobile){
         @content;
     }
 }
